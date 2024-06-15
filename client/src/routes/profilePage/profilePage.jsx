@@ -11,6 +11,7 @@ function ProfilePage() {
   const {updateUser,currentUser} = useContext(AuthContext)
 
   const navigate = useNavigate()
+ 
   const handleLogout = async() => {
     try{
       await apiRequest.post("/auth/logout");
@@ -21,7 +22,8 @@ function ProfilePage() {
     }
   }
   return (
-    <div className="profilePage">
+    
+      <div className="profilePage">
       <div className="details">
         <div className="wrapper">
           <div className="title">
@@ -61,7 +63,9 @@ function ProfilePage() {
         </div>
       </div>
     </div>
-  );
+    )
+    
+  
 }
 
 export default ProfilePage;
